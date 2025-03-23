@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>intro (˶ᵔ ᵕ ᵔ˶)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.game-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.game-container:hover {
+    transform: scale(0.98); /* Shrinks the section by 2% */
+    box-shadow: 0px 0px 20px #ff66b2; /* Optional: Adds glow effect */
+}
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: url('https://i.imgur.com/k4z5epi.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding-top: 60px;
+            cursor: url('cursor (2).cur') 25 25, auto;
+        }
+
+        .game-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border: 5px solid #ff66b2;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px #ff66b2;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Sparkle Animation */
+        @keyframes sparkle {
+            0% { text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff99cc; }
+            50% { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2; }
+            100% { text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff99cc; }
+        }
+
+        h1, h2 {
+            animation: sparkle 1.5s infinite alternate;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-top: 0px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffccff;
+        }
+
+        .nav-bar {
+            background: #ff33cc;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            padding: 8px 12px;
+        }
+
+        .nav-bar a:hover {
+            color: #ffccff;
+        }
+
+        /* Fix header scrolling issue */
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .blinkies-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 5px solid #ff66b2;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #ff66b2;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.blinkies-container:hover {
+    transform: scale(0.98); /* Shrinks the section by 2% */
+    box-shadow: 0px 0px 20px #ff66b2; /* Optional: Adds glow effect */
+}
+
+
+        .blinkies {
+            width: 250px;
+        }
+
+        .kirby-image {
+            width: 190px;
+        }
+    </style>
+</head>
+<body>
+<audio id="backgroundMusic" loop>
+    <source src="https://res.cloudinary.com/dbhjc9qaf/video/upload/v1742746152/Untitled_video_-_Made_with_Clipchamp_q2pi2u.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    // Play audio on any user interaction, like a click
+    document.body.addEventListener('click', function() {
+        const audio = document.getElementById("backgroundMusic");
+        audio.play();
+    });
+</script>
+
+    <nav class="nav-bar">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Blinkies Box -->
+<div class="blinkies-container">
+    <div class="gif-container" style="align-items: center; gap: 10px;">
+        <!-- Left Intro GIF -->
+        <img src="https://i.imgur.com/l9OFwwK.gif" alt="Intro GIF Left" class="w-28 h-auto flex-shrink-0">
+
+        <!-- Blinkies -->
+        <div class="flex flex-wrap justify-center gap-3">
+            <img src="https://i.imgur.com/II5oU68.gif" alt="This is a drama-free zone" class="blinkies">
+            <img src="https://i.imgur.com/0rKXtUg.gif" alt="I love my computer" class="blinkies">
+        </div>
+
+        <!-- Right Intro GIF -->
+        <img src="https://i.imgur.com/ppE1JhT.gif" alt="Intro GIF Right" class="w-28 h-auto flex-shrink-0">
+    </div>
+</div>
+
+
+
+    <section id="home" class="game-container">
+        <h1>WINDOW TO MY WORLD!</h1>
+        <p class="text-xl mt-2">Step into my pixelated paradise!</p>
+        <div class="gif-container">
+<img src="https://i.imgur.com/RbS7BMT.gif" alt="Kirby Retro Arcade" class="kirby-image">
+        </div>
+    </section>
+    
+    <section id="about" class="game-container">
+        <h2>About Me</h2>
+        <p class="mt-4">Hey there! I'm Diva Sharma, a first-year Computer Science student who's still figuring things out. I'm battling my way through C, C++, HTML, JS, CSS, and Python—some days I win, some days the compiler does. But hey, that's part of the fun, right?</p>
+
+        <div class="mt-8">
+            <h2>Hobbies</h2>
+            <p class="mt-4">When I’m not battling my code (or letting it win), I’m diving into my favorite things:</p>
+
+            <h3 class="mt-6 text-xl font-bold">Music</h3>
+<p class="mt-2">From chiptunes that make me feel like I'm inside an 8-bit video game, to K-pop jams that make me question if I can pull off a backflip... my playlist is all over the place. It’s basically a musical rollercoaster without the safety harness.</p>
+
+<!-- GIFs Section with Slightly Wider Compact Width -->
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+    <img src="https://i.imgur.com/eD5uiUw.gif" alt="Music GIF 1" class="w-60">
+    <img src="https://i.imgur.com/UQbOWZi.gif" alt="Music GIF 2" class="w-60">
+    <img src="https://i.imgur.com/JiJ3oiF.gif" alt="Music GIF 3" class="w-60">
+</div>
+            <h3 class="mt-6 text-xl font-bold">Horror Movies</h3>
+<p class="mt-2">I don’t scream. I just stare blankly at the screen, wondering why I thought watching a horror movie alone at midnight was a good idea.</p>
+
+<!-- GIFs Section with Compact Width -->
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+    <img src="https://i.imgur.com/76UhtHu.gif" alt="Horror GIF 1" class="w-36">
+    <img src="https://i.imgur.com/e1x8tGb.gif" alt="Horror GIF 2" class="w-36">
+    <img src="https://i.imgur.com/jBm9UTt.gif" alt="Horror GIF 3" class="w-36">
+</div>
+
+
+            <h3 class="mt-6 text-xl font-bold">Photography</h3>
+<p class="mt-2">Okay, so I’m no professional photographer, but I’ve definitely got an eye for capturing... the random stuff. The way sunlight hits a street sign, that one time I accidentally photographed my shadow (it was a vibe), or just cool skies. I mean, who needs a model when you’ve got clouds and cats?
+
+</p>
+
+<!-- GIFs Section with Photography GIFs in one line -->
+<div class="flex justify-center gap-3 mt-4" style="flex-wrap: nowrap;">
+    <img src="https://i.imgur.com/b9BXjZl.gif" alt="Photography GIF 1" class="blinkies">
+    <img src="https://i.imgur.com/RFbTXVn.gif" alt="Photography GIF 2" class="blinkies">
+    <img src="https://i.imgur.com/82sVUuK.gif" alt="Photography GIF 3" class="blinkies">
+</div>
+</section>
+
+
+    <section id="gallery" class="game-container">
+    <h2>Gallery</h2>
+    <p class="mt-4">Step into my digital wonderland! I’ve put together a collection of my most cherished pixelated memories—because why keep them to myself when you can enjoy them too?</p>
+
+    <div class="relative w-full max-w-md mx-auto">
+        <div class="relative">
+            <img id="galleryImage" src="" alt="Gallery Image" class="w-full rounded-lg shadow-lg">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button onclick="prevImage()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white px-3 py-2 rounded-l-lg">‹</button>
+        <button onclick="nextImage()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white px-3 py-2 rounded-r-lg">›</button>
+    </div>
+</section>
+
+
+<!-- JavaScript (Place at the End of the Body) -->
+<script>
+    // Ensure script runs only after page loads
+    window.onload = function() {
+        const images = [
+            "https://i.imgur.com/5X1ueCn.jpeg",
+            "https://i.imgur.com/kv2HPx2.jpeg",
+            "https://i.imgur.com/byqumzk.jpeg",
+            "https://i.imgur.com/Qf2IwhU.jpeg",
+            "https://i.imgur.com/uxBbyC7.jpeg",
+            "https://i.imgur.com/JvPnLVg.jpeg",
+            "https://i.imgur.com/cvqNH1q.jpeg",
+            "https://i.imgur.com/reNxKkv.jpeg",
+            "https://i.imgur.com/5hqn0Yu.jpeg",
+            "https://i.imgur.com/NWJO8Vn.jpeg",
+            "https://i.imgur.com/ckl57aJ.jpeg",
+            "https://i.imgur.com/11qKscp.jpeg",
+            "https://i.imgur.com/IQqJMqn.jpeg",
+            "https://i.imgur.com/3DZaO9D.jpeg",
+            "https://i.imgur.com/Ni4uyFz.jpeg",
+            "https://i.imgur.com/AyQ9Emh.jpeg",
+            "https://i.imgur.com/pGq2Rto.jpeg",
+            "https://i.imgur.com/vrc7qGL.jpeg",
+            "https://i.imgur.com/hdD6uei.jpeg"
+        ];
+
+        let currentIndex = 0;
+        const imgElement = document.getElementById("galleryImage");
+
+        // Preload images for fast loading
+        images.forEach((imgSrc) => {
+            const img = new Image();
+            img.src = imgSrc;
+        });
+
+        // Load first image
+        imgElement.src = images[currentIndex];
+
+        // Function to show previous image
+        window.prevImage = function () {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            imgElement.src = images[currentIndex];
+        };
+
+        // Function to show next image
+        window.nextImage = function () {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            imgElement.src = images[currentIndex];
+        };
+    };
+</script>
+
+
+    <section id="contact" class="game-container">
+    <h2>Contact Me</h2>
+    <p class="mt-4">Want to chat? Fill out the form below!</p>
+
+    <form action="https://formsubmit.co/YOUR-EMAIL@EXAMPLE.COM" method="POST" class="mt-6 flex flex-col gap-4">
+        <!-- Name Input -->
+        <input type="text" name="name" placeholder="Your Name" required 
+               class="p-2 bg-gray-800 text-white border border-pink-400 rounded-lg">
+
+        <!-- Email Input -->
+        <input type="email" name="email" placeholder="Your Email" required 
+               class="p-2 bg-gray-800 text-white border border-pink-400 rounded-lg">
+
+        <!-- Message Input -->
+        <textarea name="message" placeholder="Your Message" required 
+                  class="p-2 bg-gray-800 text-white border border-pink-400 rounded-lg h-32"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" class="bg-pink-500 text-white p-3 rounded-lg hover:bg-pink-600">
+            Send Message
+        </button>
+    </form>
+</section>
+
+
+    
+    <footer class="game-container">
+        <div class="gif-container">
+<img src="https://i.imgur.com/XYC7v9T.gif" alt="Real Life Computer AI" class="blinkies">
+<img src="https://i.imgur.com/Uz7fog9.gif" alt="Game Over" class="blinkies">
+<img src="https://i.imgur.com/R3uHZ6p.gif" alt="Donate 2 My PayPal" class="blinkies">
+        </div>
+    </footer>
+</body>
+</html>
